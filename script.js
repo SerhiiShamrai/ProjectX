@@ -1,6 +1,6 @@
 "use strict";
 
-const deadTime = "2025-09-04";
+const deadTime = "2025-09-04"; 
 
 function getTimeRemaining(endTime) {
   const t = Date.parse(endTime) - Date.parse(new Date()),
