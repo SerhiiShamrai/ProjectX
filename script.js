@@ -35,10 +35,10 @@ function setClock(selector, endTime) {
   UpdateTime();
 
   const interval = setInterval(() => {
-    UpdateTime(interval);
+    UpdateTime();
   }, 1000);
 
-  function UpdateTime(interval) {
+  function UpdateTime() {
     const clock = getTimeRemaining(endTime);
     days.innerHTML = addZero(clock.days);
     hours.innerHTML = addZero(clock.hours);
