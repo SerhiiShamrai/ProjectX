@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peace</title>
+    <style>
+      body {
+        background: rgb(228, 228, 228) url("eath.jpg");
+        background-size: cover;
+      }
+
+      .timer {
+        width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+        border-radius: 5px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .timer img {
+        width: 780px;
+        margin: 10px;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .time-block {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+
+      .time {
+        width: 110px;
+        height: 110px;
+        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+        margin: 0px 30px;
+        font-size: 90px;
+        text-align: center;
+      }
+
+      .info-block {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+
+      .info {
+        width: 110px;
+        margin: 0 30px;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      button {
+        width: 100px;
+        height: 60px;
+      }
+
+      @media (max-width: 1000px) {
+        .timer {
+          width: 700px;
+
+        }
+        .timer img {
+          width: 680px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .timer {
+          width: 400px;
+          height: 600px;
+        }
+
+        .timer img {
+          width: 380px;
+        }
+
+        .time {
+          display: inline-block;
+          font-size: 50px;
+          width: 65px;
+          height: 65px;
+          margin: 0 15px;
+        }
+
+        .info {
+          margin: 0 15px;
+          font-size: 15px;
+        }
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="timer">
+      <img src="tramp.webp" alt=""/>
+      <h1>Трамп 21.08.2025:<br />"Через 2 тижні ми дізнаємося, чи буде мир в Україні"</h1>
+      <h2>ЗАЛИШИЛОСЯ:</h2>
+      <div class="time-block">
+        <div class="time" id="days"></div>
+        <div class="time" id="hours"></div>
+        <div class="time" id="minutes"></div>
+        <div class="time" id="seconds"></div>
+      </div>
+      <div class="info-block">
+        <div class="info">Днів</div>
+        <div class="info">Годин</div>
+        <div class="info">Хвилин</div>
+        <div class="info">Секунд</div>
+      </div>
+      <!-- <button id="sound">Звук</button> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
