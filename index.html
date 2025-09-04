@@ -47,11 +47,11 @@
       }
 
       .time {
-        width: 110px;
-        height: 110px;
+        width: 7rem;
+        height: 7rem;
         box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
         margin: 0px 30px;
-        font-size: 90px;
+        font-size: 5.5rem;
         text-align: center;
       }
 
@@ -76,6 +76,11 @@
         height: 60px;
       }
 
+      .red {
+          background-color: rgb(192, 46, 46);
+          color: white;
+        }
+
       @media (max-width: 1000px) {
         .timer {
           width: 700px;
@@ -86,14 +91,28 @@
         }
       }
 
+      @media (max-width: 700px) {
+        .timer {
+          width: 95%;
+        }
+
+        .timer img {
+          width: 95%;
+        }
+
+        .time {
+
+        }
+      }
+
       @media (max-width: 500px) {
         .timer {
-          width: 400px;
+          width: 95%;
           height: 600px;
         }
 
         .timer img {
-          width: 380px;
+          width: 95%;
         }
 
         .time {
@@ -108,8 +127,9 @@
           margin: 0 15px;
           font-size: 15px;
         }
-
       }
+
+      
 
     </style>
   </head>

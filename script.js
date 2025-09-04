@@ -1,6 +1,8 @@
 "use strict";
 
-const deadTime = "2025-09-04"; 
+const deadTime = "2025-09-04";
+
+const timeItems = document.querySelectorAll('.time');
 
 function getTimeRemaining(endTime) {
   const t = Date.parse(endTime) - Date.parse(new Date()),
@@ -19,9 +21,13 @@ function getTimeRemaining(endTime) {
 }
 
 function addZero(time) {
-  if (time < 10) {
+  if (time < 0) {
+    return time = '00';
+  }
+  else if (time < 10) {
     return time = '0' + time;
-  } else {
+  }
+  else {
     return time;
   }
 }
@@ -44,9 +50,16 @@ function setClock(selector, endTime) {
     hours.innerHTML = addZero(clock.hours);
     minutes.innerHTML = addZero(clock.minutes);
     seconds.innerHTML = addZero(clock.seconds);
+
     if (clock.total <= 0) {
+      const end = setInterval(() => {
+        timeItems.forEach((item) => {
+          item.classList.toggle('red');
+        });
+      }, 500);
       clearInterval(interval);
     }
+    
   }
 }
 
